@@ -385,6 +385,11 @@ jQuery(function ($) {
                 minColumns: 2
             });
         }
+        $('.loading-mask').css({
+            transition: "opacity 500ms",
+            display: "none",
+            opacity: "0"
+        });
         if ($('.article_details.full .photoswipe-slider').length) {
             $('.article_details.full .photoswipe-slider').shapeshift({
                 autoHeight: true,
