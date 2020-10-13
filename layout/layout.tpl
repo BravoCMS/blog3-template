@@ -118,10 +118,10 @@
         <{else}>
         <style>
             :root {
-                --first-color: #2c3e50;
-                    --second-color:  #c0392b;
-                    --first-alpha-color: #2c3e50cc;
-                    --second-alpha-color: #c0392bcc;
+                --first-color: #444444;
+                --second-color:  #cea525;
+                --first-alpha-color: #444444cc;
+                --second-alpha-color: #cea525cc;
             }
         </style>
         <{/if}>
@@ -164,50 +164,55 @@
                         </a>
                     </div>
 
+
+                    
                     <div class="header-setting">
+                        <div class="menu-mobile">
+                            <div class="slicknav_menu">
+                                <a class="slicknav_btn slicknav_collapsed">
+                                    <span class="slicknav_menutxt"></span>
+                                    <span class="slicknav_icon slicknav_no-text">
+                                        <span class="slicknav_icon-bar"></span>
+                                        <span class="slicknav_icon-bar"></span>
+                                        <span class="slicknav_icon-bar"></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <{if $site.languages|count > 1}>
                         <div class="language-select-form">
-                            <{if $site.languages|count > 1}>
-                                <div class="language-active" id="languages-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <{$site.active_language.name|htmlspecialchars}>
-                                </div>
-                                <div class="block_language">
-                                    <{foreach $site.languages as $language}>
-                                        <a class="<{if $language.language_id == $site.active_language.language_id}>active<{/if}>" href="<{$language.page_url}>">
-                                            <{$language.name|htmlspecialchars}>
-                                        </a>
-                                    <{/foreach}>
-                                </div>
-                            <{/if}>
+                            <div class="language-active" id="languages-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <{$site.active_language.name|htmlspecialchars}>
+                            </div>
+                            <div class="block_language">
+                                <{foreach $site.languages as $language}>
+                                    <a class="<{if $language.language_id == $site.active_language.language_id}>active<{/if}>" href="<{$language.page_url}>">
+                                        <{$language.name|htmlspecialchars}>
+                                    </a>
+                                <{/foreach}>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-mobile">
-                        <div class="slicknav_menu">
-                            <a class="slicknav_btn slicknav_collapsed">
-                                <span class="slicknav_menutxt"></span>
-                                <span class="slicknav_icon slicknav_no-text">
-                                    <span class="slicknav_icon-bar"></span>
-                                    <span class="slicknav_icon-bar"></span>
-                                    <span class="slicknav_icon-bar"></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                        <{/if}>
                         
-                    <div class="section" id="top-social">
-                        <div class="widget HTML" id="HTML10"></div>
-                        <div class="top-social-icons">
-                            <i class="fa fa-facebook"></i>
-                            <i class="fa fa-instagram"></i>
-                            <i class="fa fa-vk"></i>
-                            <i class="fa fa-pinterest"></i>
-                            <i class="fa fa-twitter"></i>
-                            <i class="fa fa-heart"></i>
-                            <i class="fa fa-google-plus"></i>
-                            <i class="fa fa-tumblr"></i>
-                            <i class="fa fa-youtube"></i>
-                            <i class="fa fa-yelp"></i>
+                        <div class="section" id="top-social">
+                            <div class="widget HTML" id="HTML10"></div>
+                            <div class="top-social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-vk"></i>
+                                <i class="fa fa-pinterest"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-tumblr"></i>
+                                <i class="fa fa-youtube"></i>
+                                <i class="fa fa-yelp"></i>
+                            </div>
                         </div>
                     </div>
+                    
+                        
+
 
                     <div class="slicknav_nav slicknav_hidden" id="top-menu-content">
                         <{get_menu "top" "top_menu"}>

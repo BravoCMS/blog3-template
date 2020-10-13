@@ -187,6 +187,7 @@ jQuery(function ($) {
 
     $('.slicknav_btn').on('click', function (e) {
         e.preventDefault();
+        $("body").toggleClass("overflow-hidden");
         $('.slicknav_nav').fadeToggle();
     });
 
@@ -602,8 +603,10 @@ jQuery(document).ready(function ($) {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollToTop').fadeIn();
+            $(".header-fixed").css("background-color", "#FDFDF9ED")
         } else {
             $('.scrollToTop').fadeOut();
+            $(".header-fixed").css("background-color", "#FDFDF9")
         }
     });
 

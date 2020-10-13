@@ -96,8 +96,13 @@ body {
     top: 50%;
     margin-top: -15px;
 }
-.header-wrp #top-social {
+.header-wrp .header-setting + #top-social {
     right: 165px;
+    top: 50%;
+    margin-top: -13px;
+}
+.header-wrp .menu-mobile + #top-social {
+    right: 20px;
     top: 50%;
     margin-top: -13px;
 }
@@ -1753,6 +1758,11 @@ form input[type="button"]:hover {
     }
 }
 @media only screen and (max-width: 767px) {
+    .header-setting {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .show-left .main-content-wrp {
         width: 320px;
         margin: 40px auto 0;
@@ -1864,6 +1874,12 @@ form input[type="button"]:hover {
     .header .header-wrp .header_menu_top li a:hover {
         color: rgba(158, 157, 144, 0.73) !important;
     }
+    .header-wrp .header_menu_top a {
+        border-bottom: 1px solid transparent !important;
+    }
+    body.overflow-hidden {
+        overflow: hidden;
+    }
     .slicknav_nav {
         display: none;
         clear: both;
@@ -1875,10 +1891,17 @@ form input[type="button"]:hover {
         z-index: 11;
     }
     .header .header-wrp .header_menu_top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         background-color: rgba(253, 253, 249, 0.93);
         padding-top: 30px;
         height: auto;
         padding-bottom: 30px;
+        height: calc(100vh - 151px);
+        overflow-y: auto;
     }
     .header .header-wrp .header_menu_top li a {
         font-size: 23px;
@@ -1919,13 +1942,25 @@ form input[type="button"]:hover {
         display: inline-block;
     }
     .header-setting {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 9999;
+    }
+    .main_container {
+        padding-top: 151px;
     }
     .header-setting .menu-mobile {
-        display: inline-block;
-        vertical-align: top;
         z-index: 11;
-        float: left;
+    }
+    .header-wrp .menu-mobile + #top-social {
+        margin-top: 0;
     }
     .header-setting .language-select-form {
         display: inline-block;
