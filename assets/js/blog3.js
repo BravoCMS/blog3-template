@@ -342,118 +342,112 @@ jQuery(function ($) {
     }
 
     $(document).on('focus', 'input[type=text], textarea', function () {
+        $(this).off();
         if ($(this).val().length) {
-            $(this).closest('.input_line').find('.label').css({'opacity': '1'});
-        } else {
             $(this).closest('.input_line').find('.label').css({'opacity': '0'});
+        } else {
+            $(this).closest('.input_line').find('.label').css({'opacity': '1'});
         }
         $(this).blur(function () {
             if ($(this).val().length) {
-                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
-            } else {
                 $(this).closest('.input_line').find('.label').css({'opacity': '0'});
+            } else {
+                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
             }
         });
         $(this).keydown(function () {
             if ($(this).val().length) {
-                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
-            } else {
                 $(this).closest('.input_line').find('.label').css({'opacity': '0'});
+            } else {
+                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
             }
         });
         $(this).keyup(function () {
             if ($(this).val().length) {
-                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
-            } else {
                 $(this).closest('.input_line').find('.label').css({'opacity': '0'});
+            } else {
+                $(this).closest('.input_line').find('.label').css({'opacity': '1'});
             }
         });
     });
-
-    $(window).on('load', function () {
-        if ($('.article_details.full .img_list').length) {
-            $('.article_details.full .img_list').shapeshift({
-                autoHeight: true,
-                enableDrag: false,
-                enableCrossDrop: false,
-                align: 'left',
-                gutterX: 0,
-                gutterY: 0,
-                paddingX: 0,
-                paddingY: 0,
-                columns: 2,
-                minColumns: 2
-            });
-        }
-        $('.loading-mask').css({
-            transition: "opacity 500ms",
-            display: "none",
-            opacity: "0"
-        });
-        if ($('.article_details.full .photoswipe-slider').length) {
-            $('.article_details.full .photoswipe-slider').shapeshift({
-                autoHeight: true,
-                enableDrag: false,
-                enableCrossDrop: false,
-                align: 'left',
-                gutterX: 0,
-                gutterY: 0,
-                paddingX: 0,
-                paddingY: 0,
-                columns: 2,
-                minColumns: 2
-            });
-        }
-        if ($('.gallery-photos').length) {
-            $('.gallery-photos').shapeshift({
-                autoHeight: true,
-                enableDrag: false,
-                enableCrossDrop: false,
-                align: 'left',
-                gutterX: 0,
-                gutterY: 0,
-                paddingX: 0,
-                paddingY: 0,
-                columns: 2,
-                minColumns: 2
-            });
-        }
-
-        $('.header-wrp').css({
-            'transform': 'translateX(0px) translateY(0px)',
-            'opacity': '1',
-            'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
-        });
-        $('.header-wrp .menu-mobile').css({
-            'transform': 'translateX(0px) translateY(0px)',
-            'opacity': '1',
-            'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
-        });
-        $('.header-wrp .slicknav_nav').css({
-            'transform': 'translateX(0px) translateY(0px)',
-            'opacity': '1',
-            'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
-        });
-        setTimeout(function () {
-            $('.header-wrp .logo-wrp').css({
-                'opacity': '1',
-                'transform': 'translateX(0px) translateY(0px)',
-                'transition': 'opacity 500ms, transform 500ms'
-            });
-        }, 400);
-        setTimeout(function () {
-            $('.header-wrp .language-select-form').css({
-                'opacity': '1',
-                'transform': 'translateX(0px) translateY(0px)',
-                'transition': 'opacity 500ms, transform 500ms'
-            });
-            $('.header-wrp #top-social').css({
-                'opacity': '1',
-                'transform': 'translateX(0px) translateY(0px)',
-                'transition': 'opacity 500ms, transform 500ms'
-            });
-        }, 600);
-    });
+    $( "img" ).ready(function () {
+		if ($('.article_details.full .img_list').length) {
+		    $('.article_details.full .img_list').shapeshift({
+				autoHeight: true,
+				enableDrag: false,
+				enableCrossDrop: false,
+				align: 'left',
+				gutterX: 0,
+				gutterY: 0,
+				paddingX: 0,
+				paddingY: 0,
+				columns: 2,
+				minColumns: 2
+		    });
+		}
+		if ($('.article_details.full .photoswipe-slider').length) {
+		    $('.article_details.full .photoswipe-slider').shapeshift({
+				autoHeight: true,
+				enableDrag: false,
+				enableCrossDrop: false,
+				align: 'left',
+				gutterX: 0,
+				gutterY: 0,
+				paddingX: 0,
+				paddingY: 0,
+				columns: 2,
+				minColumns: 2
+		    });
+		}
+		if ($('.gallery-photos').length) {
+		    $('.gallery-photos').shapeshift({
+				autoHeight: true,
+				enableDrag: false,
+				enableCrossDrop: false,
+				align: 'left',
+				gutterX: 0,
+				gutterY: 0,
+				paddingX: 0,
+				paddingY: 0,
+				columns: 2,
+				minColumns: 2
+		    });
+		}
+		$('.header-wrp').css({
+			'transform': 'translateX(0px) translateY(0px)',
+    		'opacity': '1',
+    		'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
+		});
+		$('.header-wrp .menu-mobile').css({
+			    'transform': 'translateX(0px) translateY(0px)',
+			    'opacity': '1',
+			    'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
+		});
+		$('.header-wrp .slicknav_nav').css({
+			    'transform': 'translateX(0px) translateY(0px)',
+			    'opacity': '1',
+			    'transition': 'transform 900ms cubic-bezier(0.075, 0.82, 0.165, 1)'
+		});
+		setTimeout(function(){
+			$('.header-wrp .logo-wrp').css({
+				        'opacity': '1',
+					    'transform': 'translateX(0px) translateY(0px)',
+					    'transition': 'opacity 500ms, transform 500ms'
+			});
+		}, 400);
+		setTimeout(function(){
+			$('.header-wrp .language-select-form').css({
+				        'opacity': '1',
+					    'transform': 'translateX(0px) translateY(0px)',
+					    'transition': 'opacity 500ms, transform 500ms'
+			});
+			$('.header-wrp #top-social').css({
+				        'opacity': '1',
+					    'transform': 'translateX(0px) translateY(0px)',
+					    'transition': 'opacity 500ms, transform 500ms'
+			});
+		}, 600);
+	});
 
     if ($('.article_details.short').length) {
         $('.article_details.short').each(function () {
@@ -499,7 +493,6 @@ jQuery(function ($) {
     $(window).resize(function () {
         var winWidth = $(window).width(),
                 winHeight = $(window).height();
-
         if ($('.article_details.full .img_list').length) {
             $('.article_details.full .img_list').shapeshift({
                 autoHeight: true,
@@ -528,6 +521,20 @@ jQuery(function ($) {
                 minColumns: 2
             });
         }
+        if ($('.gallery-photos').length) {
+		    $('.gallery-photos').shapeshift({
+				autoHeight: true,
+				enableDrag: false,
+				enableCrossDrop: false,
+				align: 'left',
+				gutterX: 0,
+				gutterY: 0,
+				paddingX: 0,
+				paddingY: 0,
+				columns: 2,
+				minColumns: 2
+		    });
+		}
         if (winWidth > 1400) {
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
@@ -586,22 +593,6 @@ jQuery(function ($) {
     $(window).scroll(function () {
         var scrollVal = $(window).scrollTop();
     });
-    
-    $(window).load(function () {
-        $('.loading-mask').css({
-            transition: "opacity 500ms",
-            display: "none",
-            opacity: "0"
-        });
-    });
-
-    setTimeout(function () {
-        $('.loading-mask').css({
-            transition: "opacity 500ms",
-            display: "none",
-            opacity: "0"
-        });
-    }, 2000);
 });
 
 

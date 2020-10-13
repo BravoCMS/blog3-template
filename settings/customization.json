@@ -1,0 +1,20 @@
+{
+    "is_custom_scheme": {
+        "type": "checkbox",
+        "name": "Apply your theme?",
+        "default": 0,
+        "image": "/assets/image/scheme/orange.jpg"
+    },
+    "first_color": {
+        "type": "color",
+        "name": "First color for template",
+        "default": "#ffffff",
+        "image": "/assets/image/customization/some_color.jpg"
+    },
+    "second_color": {
+        "type": "color",
+        "name": "Second color for template",
+        "default": "#ffffff",
+        "image": "/assets/image/customization/some_text.jpg"
+    }
+}
