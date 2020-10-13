@@ -1,17 +1,17 @@
 {
-    "orange": {
-        "name": "Orange",
-        "color": "#ff8c00",
-        "image": "/assets/image/scheme/orange.jpg"
+    "silver-gold": {
+        "name": "silver-gold",
+        "color": "#444444",
+        "image": "/assets/img/silver-gold.png"
     },
-    "blue": {
-        "name": "Blue",
-        "color": "#6495ed",
-        "image": "/assets/image/scheme/blue.jpg"
+    "gold-silver": {
+        "name": "gold-silver",
+        "color": "#996515",
+        "image": "/assets/img/gold-silver.png"
     },
-    "red": {
-        "name": "Red",
-        "color": "#ff4500",
-        "image": "/assets/image/scheme/red.png"
+    "blue-red": {
+        "name": "blue-red",
+        "color": "#2c3e50",
+        "image": "/assets/img/blue-red.png"
     }
 }
