@@ -1894,14 +1894,19 @@ form input[type="button"]:hover {
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;
         right: 0;
-        background-color: rgba(253, 253, 249, 0.93);
+        background-color: #FDFDF9;
         padding-top: 30px;
-        height: auto;
         padding-bottom: 30px;
-        height: calc(100vh - 151px);
-        overflow-y: auto;
+        height: calc(100vh - 119px);
+        overflow-y: scroll;
+        bottom: -25px;
+        padding-bottom: 80px;
+        transform: translateY(-25px);
+        width: 100%;
+    }
+    .header .header-wrp .header_menu_top li {
+        width: 100%;
     }
     .header .header-wrp .header_menu_top li a {
         font-size: 23px;
@@ -1935,6 +1940,7 @@ form input[type="button"]:hover {
         left: auto;
         right: auto;
         margin-top: 0;
+        z-index: 999999999;
     }
     .header-wrp .language-select-form {
         margin: 0 auto;

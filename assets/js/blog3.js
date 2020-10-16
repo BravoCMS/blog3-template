@@ -603,10 +603,8 @@ jQuery(document).ready(function ($) {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollToTop').fadeIn();
-            $(".header-fixed").css("background-color", "#FDFDF9ED")
         } else {
             $('.scrollToTop').fadeOut();
-            $(".header-fixed").css("background-color", "#FDFDF9")
         }
     });
 
