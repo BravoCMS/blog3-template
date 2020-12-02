@@ -54,6 +54,9 @@ body {
 .header-wrp {
     position: relative;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     -webkit-transform: translate(0px, -108px);
     -ms-transform: translate(0px, -108px);
@@ -61,17 +64,34 @@ body {
     transform: translate(0px, -108px);
     z-index: 10;
 }
+.header-wrp .header-setting{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .header-wrp .menu-mobile,
 .header-wrp .slicknav_nav {
-    position: absolute;
+    /* position: absolute;
     left: 20px;
     top: 0;
-    z-index: 9;
+    z-index: 9; */
     -webkit-transform: translate(0px, -108px);
     -ms-transform: translate(0px, -108px);
     -o-transform: translate(0px, -108px);
     transform: translate(0px, -108px);
 }
+.header-wrp .logo-wrp {
+    order: 1;
+}
+.header-wrp .header-setting {
+    order: 2;
+    width: 300px;
+}
+.header-wrp .top-menu-content {
+    order: 0;
+}
+
 .header-wrp .logo-wrp {
 	opacity: 0;
     -webkit-transform: translate(0px, -10px);
@@ -83,20 +103,20 @@ body {
 }
 .header-wrp .language-select-form,
 .header-wrp #top-social {
-    position: absolute;
+    /* position: absolute;
     z-index: 9;
-    opacity: 0;
+    opacity: 0; */
     -webkit-transform: translate(0px, -10px);
     -ms-transform: translate(0px, -10px);
     -o-transform: translate(0px, -10px);
     transform: translate(0px, -10px);
 }
-.header-wrp .language-select-form {
+/* .header-wrp .language-select-form {
     right: 20px;
     top: 50%;
     margin-top: -15px;
-}
-.header-wrp .header-setting + #top-social {
+} */
+/* .header-wrp .header-setting + #top-social {
     right: 165px;
     top: 50%;
     margin-top: -13px;
@@ -105,7 +125,7 @@ body {
     right: 20px;
     top: 50%;
     margin-top: -13px;
-}
+} */
 .header-wrp #top-social a {
     margin-right: 7px;
     margin-left: 4px;
@@ -1834,26 +1854,47 @@ form input[type="button"]:hover {
     .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
         margin-top: 0.188em;
     }
-    .header .header-wrp .header_menu_top {
+    /* .header .header-wrp .header_menu_top {
         padding: 0;
         margin: 0;
-    }
+    } */
     .header .header-wrp .header_menu_top li {
         display: block;
     }
     .header-fixed {
         overflow: visible;
     }
-    #top-social {
+    
+    /* #top-social {
         position: absolute;
         right: 145px;
         top: 0;
-    }
-    .language-select-form {
+    } */
+    /* .language-select-form {
         position: absolute;
         right: 0;
         top: 0;
+    } */
+    .header-wrp .header-setting {
+        width: 100%;
+        flex-direction: row;
+        position: relative;
+        z-index: 99;
     }
+    .menu-mobile,
+    #top-social {
+        min-width: 100px;
+    }
+
+    /* .header-setting .menu-mobile {
+        order: 0;
+    }
+    .header-setting .language-select-form {
+        order: 1;
+    }
+    .header-setting #top-social {
+        order: 2;
+    } */
     .header .header-wrp .header_menu_top li a {
         display: block;
         padding: 5px 10px;
@@ -1933,20 +1974,31 @@ form input[type="button"]:hover {
         position: static;
         /*margin: 0 -20px;*/
     }
-    .header-wrp .language-select-form,
-    .header-wrp #top-social {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        margin-top: 0;
-        z-index: 999999999;
+    .header-wrp .logo-wrp {
+        width: 100%;
     }
-    .header-wrp .language-select-form {
-        margin: 0 auto;
-        z-index: 10;
-        display: inline-block;
+    .header-wrp {
+        flex-wrap: wrap;
     }
+    .header-wrp .language-select-form, .header-wrp #top-social {
+        /* position: absolute;
+        z-index: 9;
+        opacity: 0; */
+        -webkit-transform: translate(0px, -10px);
+        -ms-transform: translate(0px, -10px);
+        -o-transform: translate(0px, -10px);
+        transform: translate(0px, -10px);
+    }
+    /* .header-wrp #top-social {
+        right: 165px;
+        top: 50%;
+        margin-top: -13px;
+    } */
+    /* .header-wrp .language-select-form {
+        right: 20px;
+        top: 50%;
+        margin-top: -15px;
+    } */
     .header-setting {
         padding-bottom: 10px;
     }
